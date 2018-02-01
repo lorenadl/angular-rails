@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="list-group">
+    <a class="list-group-item list-group-item-action flex-column align-items-start active">
+      <div class="d-flex w-100 justify-content-between">
+        <h1 class="headLine">Proposal List</h1>
+      </div>
+    </a>
+
+    <!-- <a *ngFor="let proposal of proposals" routerLink="/proposal/{{ proposal.id }}" class="list-group-item list-group-item-action proposal-link"> -->
+    <a *ngFor="let proposal of proposals" (click)="goToShow(proposal)" class="list-group-item list-group-item-action proposal-link">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="list-group-item-heading">{{ proposal.customer }}</h5>
+      </div>
+      <p class="mb-1">
+        {{ proposal.hourly_rate * proposal.estimated_hours |
+          currency: 'USD':true:'.0' }}
+      </p>
+    </a>
+
+  </div>
+
+</div>

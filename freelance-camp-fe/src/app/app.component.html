@@ -1,0 +1,37 @@
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded nav-styles">
+  <button class="custom-toggler navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class='nav-item'>
+        <a class='nav-link' routerLink="/home" routerLinkActive="active">Home</a>
+      </li>
+      <li class='nav-item'>
+        <a class='nav-link' routerLink="/documents" routerLinkActive="active">Docs</a>
+      </li>
+      <li class="nav-item dropdown">
+        <div ngbDropdown class="d-inline-block dropdown-links">
+          <button class="btn btn-outline-primary" id="proposalDropdown" ngbDropdownToggle>
+            Proposals
+          </button>
+          <div class="dropdown-menu" aria-labelledby="proposalDropdown">
+            <a class="dropdown-item"
+                routerLink="/proposals"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">
+              Proposals
+            </a>
+            <a class="dropdown-item" routerLink="/proposals/new" routerLinkActive="active">New proposals</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="app-body">
+  <router-outlet></router-outlet>
+</div>

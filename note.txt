@@ -1,0 +1,10 @@
+comando per lanciare il server ng e farlo vedere anche da altre macchine:
+ng serve --host=0.0.0.0
+
+sul browser:
+http://mywebserverip:4200
+
+
+per lanciare il server rails:
+rails s -b 0.0.0.0 -p 3002
+
