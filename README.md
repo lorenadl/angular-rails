@@ -1,2 +1,2 @@
 # angular-rails
-Angular 2 application with Ruby on Rails API webservice
+Angular 2 application with Rails 5 backend example
